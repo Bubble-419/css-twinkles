@@ -13,3 +13,10 @@ some html+css small projects, just for practicing. I hope I can persist, and hav
     *mix-blend-mode:类似ps中的颜色混合模式*
     
 4. js部分：获取window对象的scroll值，乘以不同的倍数赋给元素的top/left值，产生移动速度差，注意正负值。
+
+## 002 字体发光特效
+### [font-awesome #图标字体+svg](https://github.com/Bubble-419/cssTwinkle/tree/main/02font-awesome)
+#### 思路：
+1. 利用伪元素选择器制作外发光，利用shadow制作内发光
+2. 过渡动画和transform变换是锦上添花
+3. 具体思路见注释
