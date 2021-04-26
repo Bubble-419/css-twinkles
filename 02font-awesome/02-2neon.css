@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.neon {
+  position: absolute;
+  font-size: 6em;
+  color: #fff;
+  text-shadow: 0 0 20px #ff005b;
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 300;
+  z-index: 100;
+}
+
+.neon::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 3px;
+  z-index: -1;
+}
+
+.neon:hover::after {
+  content: attr(data-text);
+  color: #ff005b;
+  filter: blur(8px);
+  transition: .8s;
+}
+
+.neon::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+}
+
+.neon:hover::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #fe3a80;
+  opacity: .5;
+  filter: blur(40px);
+  transition: 1.5s;
+}
