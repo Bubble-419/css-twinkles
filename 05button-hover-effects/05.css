@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --red: #E1332D;
+}
+
+body {
+  background-color: var(--red);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+}
+
+h1 {
+  color: #fff;
+  font-size: 4em;
+}
+
+.btn {
+  box-sizing: border-box;
+  margin: 0 3em;
+  padding: 20px 45px;
+  border: 1px solid #fff;
+}
+
+/* 按钮1的特效由两部分组成：
+    1. hover前边框半透明，hover后边框透明度提高且具备内阴影
+    2. hover时有边框往外移动逐渐消失的特效 */
+.btn-1 {
+  border: 0;
+  outline: 1px solid rgba(255, 255, 255, .5);
+  outline-offset: 0px;
+  transition: .5s;
+}
+
+.btn-1:hover {
+  border: 1px solid;
+  /* 透明度为0，逐渐消失 */
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5);
+  text-shadow: 1px 1px 2px #427388;
+}
+
+/* 按钮2的特效由一个伪元素制作 */
+.btn-2 {
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.btn-2::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -120px;
+  width: 150%;
+  height: 50%;
+  transform-origin: center bottom;
+  transform: rotate(-30deg);
+  background-color: #fff;
+  opacity: .2;
+  transition: .4s;
+  z-index: -1;
+}
+
+.btn-2:hover::before {
+  top: 120%;
+  height: 80%;
+  left: 120%;
+}
+
+/* 按钮3的特效主要是通过颜色和阴影的变换营造突起和按下感 */
+.btn-3 {
+  border: 0;
+  background-color: #E3403A;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+  font-weight: 900;
+  letter-spacing: 1px;
+  transition: .3s;
+}
+
+.btn-3:hover {
+  background-color: #E02C26;
+  color: rgba(255, 255, 255, .3);
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, .1);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, .2);
+
+}
