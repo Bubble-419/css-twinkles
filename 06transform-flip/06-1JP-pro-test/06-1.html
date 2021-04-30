@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="06-1.css">
+</head>
+
+<body>
+  <!-- 粉笔图案模式（pattern）定义, 来自： -->
+  <!-- https://codepen.io/shshaw/pen/jmMpmd -->
+  <svg style="display: none">
+    <filter id="chalk">
+      <feTurbulence result="T" numOctaves="3" seed="0" type="fractalNoise" baseFrequency=".4" />
+      <feOffset dy="-2" dx="-2" />
+      <feDisplacementMap in2="T" scale="5" xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" />
+    </filter>
+  </svg>
+
+  <main>
+    <!-- 五十音图容器 -->
+    <section class="jp-box">
+      <!-- 发音单元格 -->
+      <div class="card-wrapper">
+        <!-- 控制前后翻转 -->
+        <div class="card-ctrl">
+          <!-- 正面，平假名 -->
+          <div class="front">
+            <div class="character">あ</div>
+            <div class="romaji">a</div>
+          </div>
+          <!-- 背面，片假名 -->
+          <div class="back">
+            <div class="character">ア</div>
+            <div class="romaji">a</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

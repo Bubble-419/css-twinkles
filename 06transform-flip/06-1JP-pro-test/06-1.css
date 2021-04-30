@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1e272e;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  filter: url(#chalk);
+}
+
+/* 外层容器开启3D空间，控制容器布局+翻转特效时间+保留3D空间 */
+.card-wrapper {
+  perspective: 300px;
+}
+
+.card-ctrl {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 4px;
+  font-size: 2.5em;
+  text-align: center;
+
+  transition: transform .8s;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d2dae2;
+
+  /* 隐藏3D背面 */
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.card-wrapper:hover .card-ctrl {
+  transform: rotateY(180deg);
+}
