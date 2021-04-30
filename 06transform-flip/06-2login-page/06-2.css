@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: #1F2029;
+  --dark-blue: #102770;
+  --yellow: #FFEBA7;
+  --gray: #C4C3CA;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--gray);
+}
+
+a {
+  text-decoration: none;
+  color: var(--gray);
+}
+
+button {
+  outline: 0;
+  box-sizing: border-box;
+}
+
+header {
+  margin-bottom: 1em;
+}
+
+header h3 span {
+  margin: 1em;
+}
+
+.choose,
+.flip {
+  position: relative;
+  background-color: var(--yellow);
+  border-radius: 8px;
+  padding: 8px 35px;
+  cursor: pointer;
+  transition: .6s;
+  margin-bottom: 2em;
+}
+
+.choose::before,
+.flip::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: var(--dark-blue);
+  transition: .6s;
+}
+
+.choose::before {
+  left: -1px;
+}
+
+.flip::before {
+  left: -10px;
+}
+
+main {
+  perspective: 600px;
+}
+
+.ctrl-box {
+  position: relative;
+  width: 440px;
+  height: 400px;
+  background: #2a2b38 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg) center center;
+  background-size: 200%;
+  border-radius: 6px;
+  transform-style: preserve-3d;
+  transition: .8s;
+}
+
+.front-login,
+.back-signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 50px;
+  text-align: center;
+  backface-visibility: hidden;
+}
+
+.back-signup {
+  transform: rotateY(180deg);
+}
+
+.ia {
+  position: relative;
+  width: 300px;
+  height: 45px;
+  margin: 20px 0;
+}
+
+input {
+  border: 0;
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 13px 22px;
+  padding-left: 53px;
+  font-size: 15px;
+  color: #fff;
+}
+
+input:focus {
+  color: #fff;
+  outline: 0;
+}
+
+.fas {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  line-height: 45px;
+  font-size: 22px;
+  color: var(--yellow);
+}
+
+.submit a {
+  background-color: var(--yellow);
+  color: var(--dark-blue);
+  padding: 10px 30px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
+  transition: .4s;
+}
+
+.submit a:hover {
+  background-color: var(--dark-blue);
+  color: var(--yellow);
+}
+
+.f-pwd {
+  font-size: .8em;
+  letter-spacing: .5px;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
