@@ -18,5 +18,5 @@ some html+css small projects, just for practicing. I hope I can persist, and hav
 ### [button-hover-effects](https://github.com/Bubble-419/cssTwinkle/tree/main/05button-hover-effects)
 
 ## 006 css翻转特效
-### [transform-flip-01-jp-test #五十音图翻转](#)
-### [transform-flip-02-login-page #登录页翻转](#)
+### [transform-flip-01-jp-test #五十音图翻转](https://github.com/Bubble-419/cssTwinkle/tree/main/06transform-flip/06-1JP-pro-test)
+### [transform-flip-02-login-page #登录页翻转](https://github.com/Bubble-419/cssTwinkle/tree/main/06transform-flip/06-2login-page)
