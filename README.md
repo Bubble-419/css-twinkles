@@ -19,4 +19,4 @@ some html+css small projects, just for practicing. I hope I can persist, and hav
 
 ## 006 css翻转特效
 ### [transform-flip-01-jp-test #五十音图翻转](#)
-### [transform-flip-02-login-page #登录页翻转]（#）
+### [transform-flip-02-login-page #登录页翻转](#)
