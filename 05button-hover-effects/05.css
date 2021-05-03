@@ -43,7 +43,7 @@ h1 {
 }
 
 /* 按钮1的特效由两部分组成：
-    1. hover前边框半透明，hover后边框透明度提高且具备内阴影
+    1. hover前边框半透明，hover时边框透明度提高且具备内阴影
     2. hover时有边框往外移动逐渐消失的特效 */
 .btn-1 {
   border: 0;
@@ -104,5 +104,63 @@ h1 {
   color: rgba(255, 255, 255, .3);
   text-shadow: -1px -1px 0 rgba(0, 0, 0, .1);
   box-shadow: inset 1px 1px 2px rgba(0, 0, 0, .2);
+}
 
+/* 按钮4&5 利用svg和animation */
+
+.btn-4,
+.btn-5 {
+  position: relative;
+  border: 0;
+}
+
+.btn-4 svg,
+.btn-5 svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 144px;
+  height: 63px;
+}
+
+.btn-4 rect,
+.btn-5 rect {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: #fff;
+}
+
+.btn-4 rect {
+  stroke-dasharray: 207 0;
+  stroke-width: 2px;
+  transition: .8s;
+}
+
+.btn-4 rect:hover {
+  stroke-dasharray: 50 600;
+  stroke-dashoffset: -256px;
+  stroke-width: 4px;
+}
+
+.btn-4:hover {
+  font-weight: 900;
+}
+
+.btn-5 rect {
+  stroke-dasharray: 50 600;
+  stroke-dashoffset: -257px;
+  stroke-width: 4px;
+}
+
+@keyframes btn-5 {
+  to {
+    stroke-dasharray: 207 0;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
+}
+
+.btn-5 rect:hover {
+  animation: .5s btn-5 linear forwards;
 }
